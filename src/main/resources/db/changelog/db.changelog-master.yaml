@@ -4,3 +4,18 @@ databaseChangeLog:
       author: Jakub.Kolacz
       file: changeset/V_0.0.1_add_user_and_address_table.yaml
       relativeToChangelogFile: true
+  - include:
+      id: 2
+      author: Jakub.Kolacz
+      file: changeset/V_0.0.2_add_password_column.yaml
+      relativeToChangelogFile: true
+  - include:
+      id: 3
+      author: Jakub.Kolacz
+      file: changeset/V_0.0.3_rename_columns.yaml
+      relativeToChangelogFile: true
+  - include:
+      id: 4
+      author: Jakub.Kolacz
+      file: changeset/V_0.0.4_rename_columns_2.yaml
+      relativeToChangelogFile: true

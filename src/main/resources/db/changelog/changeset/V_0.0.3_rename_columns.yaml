@@ -1,0 +1,17 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3
+      author: Jakub.Kolacz
+      changes:
+        - renameColumn:
+            tableName: users
+            oldColumnName: zipCode
+            newColumnName: zip_code
+        - renameColumn:
+            tableName: users
+            oldColumnName: buildingNumber
+            newColumnName: building_number
+        - renameColumn:
+            tableName: users
+            oldColumnName: flatNumber
+            newColumnName: flat_number
