@@ -1,11 +1,18 @@
 package com.honeybadgersoftware.cheappy.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Entity
-public class User {
+@Builder
+@Table(name = "users")
+@NoArgsConstructor
+@AllArgsConstructor
+public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
@@ -16,7 +23,9 @@ public class User {
     String lastName;
     @Column(name = "email", unique = true, nullable = false)
     String email;
+    @Column(name = "password", nullable = false)
+    String password;
     @Embedded
     @Column(name = "address", nullable = false)
-    Address address;
+    AddressEntity address;
 }

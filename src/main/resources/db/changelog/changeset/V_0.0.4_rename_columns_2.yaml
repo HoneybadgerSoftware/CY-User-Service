@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - changeSet:
+      id: 4
+      author: Jakub.Kolacz
+      changes:
+        - renameColumn:
+            tableName: users
+            oldColumnName: firstName
+            newColumnName: first_name
+        - renameColumn:
+            tableName: users
+            oldColumnName: lastName
+            newColumnName: last_name
