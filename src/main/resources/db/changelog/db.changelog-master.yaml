@@ -1,0 +1,6 @@
+databaseChangeLog:
+  - include:
+      id: 1
+      author: Jakub.Kolacz
+      file: changeset/V_0.0.1_add_user_and_address_table.yaml
+      relativeToChangelogFile: true
