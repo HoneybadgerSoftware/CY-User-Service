@@ -1,4 +1,4 @@
-package com.honeybadgersoftware.cheappy.model;
+package com.honeybadgersoftware.cheappy.repository.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -16,16 +16,16 @@ public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
-    Long id;
+    private Long id;
     @Column(name = "firstName", nullable = false)
-    String firstName;
+    private String firstName;
     @Column(name = "lastName")
-    String lastName;
+    private String lastName;
     @Column(name = "email", unique = true, nullable = false)
-    String email;
+    private String email;
     @Column(name = "password", nullable = false)
-    String password;
+    private String password;
     @Embedded
     @Column(name = "address", nullable = false)
-    AddressEntity address;
+    private AddressEntity address;
 }
