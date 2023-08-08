@@ -1,4 +1,4 @@
-package com.honeybadgersoftware.cheappy.model;
+package com.honeybadgersoftware.cheappy.repository.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
@@ -14,13 +14,13 @@ import lombok.NoArgsConstructor;
 @Embeddable
 public class AddressEntity {
     @Column(name = "city", nullable = false)
-    String city;
+    private String city;
     @Column(name = "zip_code", nullable = false)
-    String zipCode;
+    private String zipCode;
     @Column(name = "street", nullable = false)
-    String street;
+    private String street;
     @Column(name = "building_number", nullable = false)
-    String buildingNumber;
+    private String buildingNumber;
     @Column(name = "flat_number", nullable = true)
-    String flatNumber;
+    private String flatNumber;
 }
