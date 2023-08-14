@@ -1,0 +1,38 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: Jakub.Kolacz
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: first_name
+                  value: "John"
+              - column:
+                  name: last_name
+                  value: "Doe"
+              - column:
+                  name: email
+                  value: "john.doe-duplicate@example.com"
+              - column:
+                  name: password
+                  value: "password123"
+              - column:
+                  name: city
+                  value: "Warsaw"
+              - column:
+                  name: zip_code
+                  value: "00-001"
+              - column:
+                  name: street
+                  value: "Main St"
+              - column:
+                  name: building_number
+                  value: "123"
+              - column:
+                  name: flat_number
+                  value: "45A"

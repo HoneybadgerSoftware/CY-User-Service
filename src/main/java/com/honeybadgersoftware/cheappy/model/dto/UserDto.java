@@ -1,5 +1,6 @@
 package com.honeybadgersoftware.cheappy.model.dto;
 
+
 import lombok.*;
 
 @Data
@@ -15,7 +16,6 @@ public class UserDto {
     private String lastName;
     @NonNull
     private String email;
-    @NonNull
     private String password;
     @NonNull
     private AddressDto address;

@@ -1,12 +1,13 @@
 package com.honeybadgersoftware.cheappy.service.impl;
 
 import com.honeybadgersoftware.cheappy.model.dto.UserDto;
-import com.honeybadgersoftware.cheappy.repository.entity.UserEntity;
 import com.honeybadgersoftware.cheappy.repository.UserRepository;
+import com.honeybadgersoftware.cheappy.repository.entity.UserEntity;
 import com.honeybadgersoftware.cheappy.service.UserService;
 import com.honeybadgersoftware.cheappy.utils.mapper.UserMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
@@ -19,14 +20,15 @@ public class UserServiceImpl implements UserService {
     private final UserMapper userMapper;
 
     @Override
-    @Transactional
+    @Transactional(propagation = Propagation.REQUIRES_NEW)
     public UserEntity save(UserDto user) {
         return userRepository.save(userMapper.toEntity(user));
     }
 
     @Override
     public Optional<UserDto> getById(Long id) {
-        return Optional.of(userMapper.toDto(userRepository.findById(id).orElse(null)));
+        Optional<UserEntity> userEntity = userRepository.findById(id);
+        return userEntity.map(userMapper::toDto);
     }
 
     @Override
