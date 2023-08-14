@@ -39,7 +39,7 @@ public class UserController {
     public ResponseEntity<String> updateUser(@PathVariable Long id, @RequestBody UserDto updatedUser) {
         Optional<UserEntity> user = userService.updateUser(id, updatedUser);
         return user.isPresent() ?
-                ResponseEntity.ok("User with id: " + id + " successfully updated ")
+                ResponseEntity.ok("User with id: " + id + " successfully updated")
                 : ResponseEntity.status(HttpStatus.NOT_FOUND).body("User with provided id does not exists");
     }
 

@@ -1,12 +1,12 @@
 package com.honeybadgersoftware.cheappy.base
 
-
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.boot.test.web.client.TestRestTemplate
 import org.springframework.boot.test.web.server.LocalServerPort
 import org.springframework.test.context.TestPropertySource
 import org.testcontainers.containers.PostgreSQLContainer
+import org.testcontainers.junit.jupiter.Container
 import org.testcontainers.spock.Testcontainers
 import spock.lang.Shared
 import spock.lang.Specification
@@ -25,14 +25,11 @@ abstract class BaseIntegrationTest extends Specification {
     @Autowired
     protected TestRestTemplate restTemplate
 
-    static PostgreSQLContainer postgreSQLContainer = new PostgreSQLContainer("postgres:15.3")
+    @Container
+    PostgreSQLContainer postgreSQLContainer = new PostgreSQLContainer("postgres:15.3")
 
     def setup() {
-        addressToUseForTests = "http://localhost:${port}"
-        postgreSQLContainer.start()
+        addressToUseForTests = 'http://localhost:' + port
     }
 
-    def cleanup() {
-        postgreSQLContainer.stop()
-    }
 }
