@@ -1,0 +1,7 @@
+name: sonarcloud analysis
+on:
+  push:
+    branches: [master]
+jobs:
+  analyse:
+    uses: honeybadgersoftware/ci-cd/.github/workflows/on-push-sonar.yml@master
