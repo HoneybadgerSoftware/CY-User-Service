@@ -20,7 +20,7 @@ public class UserController {
     @GetMapping(path = "/{id}")
     public ResponseEntity<UserDto> getUser(@PathVariable Long id) {
         Optional<UserDto> user = userService.getById(id);
-        if(user.isPresent()){
+        if (user.isPresent()) {
             return ResponseEntity.ok(user.get());
         }
         return ResponseEntity.notFound().build();
