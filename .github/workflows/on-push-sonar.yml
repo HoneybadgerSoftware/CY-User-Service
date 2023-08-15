@@ -3,5 +3,5 @@ on:
   push:
     branches: [master]
 jobs:
-  analyse:
+  use-reusable-workflow:
     uses: honeybadgersoftware/ci-cd/.github/workflows/on-push-sonar.yml@master
