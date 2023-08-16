@@ -1,7 +1,7 @@
-package com.honeybadgersoftware.cheappy.utils.mapper;
+package com.honeybadgersoftware.userservice.utils.mapper;
 
-import com.honeybadgersoftware.cheappy.model.dto.UserDto;
-import com.honeybadgersoftware.cheappy.repository.entity.UserEntity;
+import com.honeybadgersoftware.userservice.model.dto.UserDto;
+import com.honeybadgersoftware.userservice.repository.entity.UserEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 

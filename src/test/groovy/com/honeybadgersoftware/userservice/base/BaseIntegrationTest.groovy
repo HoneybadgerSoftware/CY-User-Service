@@ -1,4 +1,4 @@
-package com.honeybadgersoftware.cheappy.base
+package com.honeybadgersoftware.userservice.base
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest

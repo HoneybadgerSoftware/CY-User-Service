@@ -1,7 +1,7 @@
-package com.honeybadgersoftware.cheappy.service;
+package com.honeybadgersoftware.userservice.service;
 
-import com.honeybadgersoftware.cheappy.model.dto.UserDto;
-import com.honeybadgersoftware.cheappy.repository.entity.UserEntity;
+import com.honeybadgersoftware.userservice.model.dto.UserDto;
+import com.honeybadgersoftware.userservice.repository.entity.UserEntity;
 
 import java.util.Optional;
 

@@ -7,7 +7,7 @@ plugins {
 }
 
 checkstyle {
-    toolVersion '8.36.2'  // Możesz użyć innej wersji, jeśli wolisz
+    toolVersion '8.36.2'
     configFile file("${project.rootDir}/config/checkstyle/checkstyle.xml")
 }
 

@@ -1,8 +1,8 @@
-package com.honeybadgersoftware.cheappy.controller;
+package com.honeybadgersoftware.userservice.controller;
 
-import com.honeybadgersoftware.cheappy.model.dto.UserDto;
-import com.honeybadgersoftware.cheappy.repository.entity.UserEntity;
-import com.honeybadgersoftware.cheappy.service.UserService;
+import com.honeybadgersoftware.userservice.model.dto.UserDto;
+import com.honeybadgersoftware.userservice.repository.entity.UserEntity;
+import com.honeybadgersoftware.userservice.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,4 +1,4 @@
-package com.honeybadgersoftware.cheappy;
+package com.honeybadgersoftware.userservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,10 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @EnableJpaRepositories
 @SpringBootApplication
-public class CheappyApplication {
+public class UserServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CheappyApplication.class, args);
+        SpringApplication.run(UserServiceApplication.class, args);
     }
 
 }
