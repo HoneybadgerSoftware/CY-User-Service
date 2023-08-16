@@ -34,7 +34,8 @@ public class UserServiceImpl implements UserService {
     @Override
     public int deleteById(Long id) {
 
-        if (userRepository.existsById(id)) {
+        if(userRepository.existsById(id)){
+
             userRepository.deleteById(id);
             return 1;
         }
