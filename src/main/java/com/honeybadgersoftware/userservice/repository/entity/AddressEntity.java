@@ -1,4 +1,4 @@
-package com.honeybadgersoftware.cheappy.repository.entity;
+package com.honeybadgersoftware.userservice.repository.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;

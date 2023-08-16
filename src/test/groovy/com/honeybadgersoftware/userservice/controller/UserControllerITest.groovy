@@ -1,9 +1,9 @@
-package com.honeybadgersoftware.cheappy.controller
+package com.honeybadgersoftware.userservice.controller
 
-import com.honeybadgersoftware.cheappy.base.BaseIntegrationTest
-import com.honeybadgersoftware.cheappy.model.dto.AddressDto
-import com.honeybadgersoftware.cheappy.model.dto.UserDto
-import com.honeybadgersoftware.cheappy.repository.UserRepository
+import com.honeybadgersoftware.userservice.base.BaseIntegrationTest
+import com.honeybadgersoftware.userservice.model.dto.AddressDto
+import com.honeybadgersoftware.userservice.model.dto.UserDto
+import com.honeybadgersoftware.userservice.repository.UserRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.*
 

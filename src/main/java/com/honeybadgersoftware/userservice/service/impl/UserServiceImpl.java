@@ -1,10 +1,10 @@
-package com.honeybadgersoftware.cheappy.service.impl;
+package com.honeybadgersoftware.userservice.service.impl;
 
-import com.honeybadgersoftware.cheappy.model.dto.UserDto;
-import com.honeybadgersoftware.cheappy.repository.UserRepository;
-import com.honeybadgersoftware.cheappy.repository.entity.UserEntity;
-import com.honeybadgersoftware.cheappy.service.UserService;
-import com.honeybadgersoftware.cheappy.utils.mapper.UserMapper;
+import com.honeybadgersoftware.userservice.model.dto.UserDto;
+import com.honeybadgersoftware.userservice.repository.UserRepository;
+import com.honeybadgersoftware.userservice.repository.entity.UserEntity;
+import com.honeybadgersoftware.userservice.service.UserService;
+import com.honeybadgersoftware.userservice.utils.mapper.UserMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;

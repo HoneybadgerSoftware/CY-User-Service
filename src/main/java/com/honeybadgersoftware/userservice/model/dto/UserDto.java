@@ -1,4 +1,4 @@
-package com.honeybadgersoftware.cheappy.model.dto;
+package com.honeybadgersoftware.userservice.model.dto;
 
 
 import lombok.*;
