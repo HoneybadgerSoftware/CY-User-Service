@@ -1,6 +1,7 @@
 package com.honeybadgersoftware.userservice.controller;
 
 import com.honeybadgersoftware.userservice.model.dto.UserDto;
+import com.honeybadgersoftware.userservice.model.request.UserCreateRequestBody;
 import com.honeybadgersoftware.userservice.repository.entity.UserEntity;
 import com.honeybadgersoftware.userservice.service.UserService;
 import lombok.RequiredArgsConstructor;
@@ -27,7 +28,7 @@ public class UserController {
     }
 
     @PostMapping
-    public ResponseEntity<UserEntity> createUser(@RequestBody UserDto user) {
+    public ResponseEntity<UserDto> createUser(@RequestBody UserCreateRequestBody user) {
         try {
             return ResponseEntity.status(HttpStatus.CREATED).body(userService.save(user));
         } catch (Exception e) {

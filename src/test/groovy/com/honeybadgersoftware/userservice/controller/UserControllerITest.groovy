@@ -3,6 +3,7 @@ package com.honeybadgersoftware.userservice.controller
 import com.honeybadgersoftware.userservice.base.BaseIntegrationTest
 import com.honeybadgersoftware.userservice.model.dto.AddressDto
 import com.honeybadgersoftware.userservice.model.dto.UserDto
+import com.honeybadgersoftware.userservice.model.request.UserCreateRequestBody
 import com.honeybadgersoftware.userservice.repository.UserRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.*
@@ -21,8 +22,7 @@ class UserControllerITest extends BaseIntegrationTest {
                 buildingNumber: "123",
                 flatNumber: "45A"
         )
-        def userDto = new UserDto(
-                id: 1L,
+        def userDto = new UserCreateRequestBody(
                 firstName: "John",
                 lastName: "Doe",
                 email: "john.doe@example.com",
