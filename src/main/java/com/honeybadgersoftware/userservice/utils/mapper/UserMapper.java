@@ -1,6 +1,7 @@
 package com.honeybadgersoftware.userservice.utils.mapper;
 
 import com.honeybadgersoftware.userservice.model.dto.UserDto;
+import com.honeybadgersoftware.userservice.model.request.UserCreateRequestBody;
 import com.honeybadgersoftware.userservice.repository.entity.UserEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
@@ -9,7 +10,9 @@ import org.mapstruct.Mapping;
 public interface UserMapper {
 
     @Mapping(target = "password", ignore = true)
-    UserDto toDto(UserEntity user);
+    UserDto entityToDto(UserEntity user);
 
-    UserEntity toEntity(UserDto user);
+    UserEntity dtoToEntity(UserDto user);
+
+    UserEntity creationRequestBodyToEntity(UserCreateRequestBody user);
 }

@@ -1,6 +1,7 @@
 package com.honeybadgersoftware.userservice.service.impl;
 
 import com.honeybadgersoftware.userservice.model.dto.UserDto;
+import com.honeybadgersoftware.userservice.model.request.UserCreateRequestBody;
 import com.honeybadgersoftware.userservice.repository.UserRepository;
 import com.honeybadgersoftware.userservice.repository.entity.UserEntity;
 import com.honeybadgersoftware.userservice.service.UserService;
@@ -21,20 +22,20 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional(propagation = Propagation.REQUIRES_NEW)
-    public UserEntity save(UserDto user) {
-        return userRepository.save(userMapper.toEntity(user));
+    public UserDto save(UserCreateRequestBody user) {
+        return userMapper.entityToDto(userRepository.save(userMapper.creationRequestBodyToEntity(user)));
     }
 
     @Override
     public Optional<UserDto> getById(Long id) {
         Optional<UserEntity> userEntity = userRepository.findById(id);
-        return userEntity.map(userMapper::toDto);
+        return userEntity.map(userMapper::entityToDto);
     }
 
     @Override
     public int deleteById(Long id) {
 
-        if(userRepository.existsById(id)){
+        if (userRepository.existsById(id)) {
 
             userRepository.deleteById(id);
             return 1;
@@ -50,7 +51,7 @@ public class UserServiceImpl implements UserService {
         Optional<UserEntity> optionalUser = userRepository.findById(id);
 
         if (optionalUser.isPresent()) {
-            return Optional.of(userRepository.save(userMapper.toEntity(updatedUser)));
+            return Optional.of(userRepository.save(userMapper.dtoToEntity(updatedUser)));
         }
 
         return Optional.empty();
